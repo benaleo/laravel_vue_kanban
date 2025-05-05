@@ -13,11 +13,14 @@ const form = useForm({
     email: '',
     password: '',
     password_confirmation: '',
+    // Adding remember field in case it's needed
+    remember: false,
 });
 
 const submit = () => {
     form.post(route('register'), {
         onFinish: () => form.reset('password', 'password_confirmation'),
+        preserveScroll: true, // Keep scroll position
     });
 };
 </script>
