@@ -11,6 +11,11 @@ export interface BreadcrumbItem {
     href: string;
 }
 
+export interface NavGroup {
+    name: string;
+    items: NavItem[];
+}
+
 export interface NavItem {
     title: string;
     href: string;
